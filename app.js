@@ -39,8 +39,8 @@ addForm.addEventListener('submit', e => {
  const filterTodos = (term) => {
     console.log(term);
     Array.from(list.children)
-        .filter(todo => !(todo.textContent.includes(term)))
-        .forEach(todo => todo.classList.add('filtered'));
+        .filter(todo => !(todo.textContent.toLowerCase()includes(term)))
+        .forEach(todo => todo.classList.toLowerCase()add('filtered'));
     Array.from(list.children)
         .filter(todo => (todo.textContent.includes(term)))
         .forEach(item => item.classList.remove('filtered'));
@@ -49,6 +49,6 @@ addForm.addEventListener('submit', e => {
 
  // keyup event
  search.addEventListener('keyup', () => {
-    const term = search.value.trim();
+    const term = search.value.trim().toLowerCase();
     filterTodos(term);
  });
