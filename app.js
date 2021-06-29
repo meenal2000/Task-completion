@@ -39,10 +39,10 @@ addForm.addEventListener('submit', e => {
  const filterTodos = (term) => {
     console.log(term);
     Array.from(list.children)
-        .filter(todo => !(todo.textContent.toLowerCase()includes(term)))
-        .forEach(todo => todo.classList.toLowerCase()add('filtered'));
+        .filter(todo => !(todo.textContent.toLowerCase().includes(term)))
+        .forEach(todo => todo.classList.add('filtered'));
     Array.from(list.children)
-        .filter(todo => (todo.textContent.includes(term)))
+        .filter(todo => (todo.textContent.toLowerCase().includes(term)))
         .forEach(item => item.classList.remove('filtered'));
  };
 
