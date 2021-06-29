@@ -35,8 +35,7 @@ addForm.addEventListener('submit', e => {
     }
  });
 
-
- const filterTodos = (term) => {
+const filterTodos = (term) => {
     console.log(term);
     Array.from(list.children)
         .filter(todo => !(todo.textContent.toLowerCase().includes(term)))
@@ -52,3 +51,4 @@ addForm.addEventListener('submit', e => {
     const term = search.value.trim().toLowerCase();
     filterTodos(term);
  });
+ 
